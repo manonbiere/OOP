@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Left" Height="112" VerticalAlignment="Top" Width="155" Margin="0,76,0,0">
+            <Button Content="HOME" FontSize="18"/>
+            <Button Content="GUESS" FontSize="18"/>
+            <Button Content="POKEDEX" FontSize="18"/>
+            <Button Content="HISTORY" Click="Button_Click" FontSize="18"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="60" Margin="0,374,0,0" VerticalAlignment="Top" Width="155">
+            <Button Content="SETTINGS" FontSize="18"/>
+            <Button Content="CONTACT" FontSize="18"/>
+        </StackPanel>
+        <Image HorizontalAlignment="Left" Height="430" Margin="1,0,0,0" VerticalAlignment="Top" Width="154"/>
     </Grid>
 </Window>
