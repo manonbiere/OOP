@@ -5,18 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PersonalProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        ResizeMode="CanResize"
+        WindowStyle="ToolWindow">
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="112" VerticalAlignment="Top" Width="155" Margin="0,76,0,0">
-            <Button Content="HOME" FontSize="18"/>
-            <Button Content="GUESS" FontSize="18"/>
-            <Button Content="POKEDEX" FontSize="18"/>
-            <Button Content="HISTORY" Click="Button_Click" FontSize="18"/>
+        <StackPanel HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="155">
+            <Image Height="648" Source="/Image/fond bleue.png" Stretch="Fill" Width="1152"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="60" Margin="0,374,0,0" VerticalAlignment="Top" Width="155">
-            <Button Content="SETTINGS" FontSize="18"/>
-            <Button Content="CONTACT" FontSize="18"/>
+        <StackPanel HorizontalAlignment="Left" Height="104" VerticalAlignment="Top" Width="154" Margin="0,124,0,0" RenderTransformOrigin="0.565,0.351">
+            <Button Content="HOME" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
+            <Button Content="GUESS" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
+            <Button Content="POKEDEX" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
+            <Button Content="HISTORY" Click="Button_Click" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
         </StackPanel>
-        <Image HorizontalAlignment="Left" Height="430" Margin="1,0,0,0" VerticalAlignment="Top" Width="154"/>
+        <StackPanel HorizontalAlignment="Left" Height="60" Margin="0,348,0,0" VerticalAlignment="Top" Width="155">
+            <Button Content="SETTINGS" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
+            <Button Content="CONTACT" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
+        </StackPanel>
+        <Image Margin="-2,13,637,300" Source="/Image/Poke.png" Stretch="Fill"/>
     </Grid>
 </Window>
