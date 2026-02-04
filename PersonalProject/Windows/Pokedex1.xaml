@@ -23,12 +23,10 @@
             <Button x:Name="btnContact" Content="CONTACT" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
         </StackPanel>
         <Image Margin="0,10,635,303" Source="/Image/Poke.png" Stretch="Fill"/>
-        <Image Margin="182,8,530,321" Source="/Image/fond bleue.png" Stretch="Fill"/>
         <Image Margin="309,8,403,321" Source="/Image/fond bleue.png" Stretch="Fill"/>
         <Image Margin="438,8,274,321" Source="/Image/fond bleue.png" Stretch="Fill"/>
         <Image Margin="565,8,147,321" Source="/Image/fond bleue.png" Stretch="Fill"/>
         <Image Margin="687,8,25,321" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="207,117,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="334,117,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="463,117,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="590,117,0,0" VerticalAlignment="Top"/>
@@ -47,11 +45,11 @@
         <Image Margin="309,289,403,40" Source="/Image/fond bleue.png" Stretch="Fill"/>
         <Image Margin="438,289,274,40" Source="/Image/fond bleue.png" Stretch="Fill"/>
         <Image Margin="565,289,147,40" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="687,289,25,40" Source="/Image/fond bleue.png" Stretch="Fill"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="207,398,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="334,398,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="463,398,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="590,398,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="712,398,0,0" VerticalAlignment="Top"/>
+        <Button Content="PREV" HorizontalAlignment="Left" Margin="182,8,0,0" VerticalAlignment="Top" Height="105" Width="88" Background="#FF99D9EA"/>
+        <Button Content="NEXT" HorizontalAlignment="Left" Margin="687,289,0,0" VerticalAlignment="Top" Height="105" Width="88" Background="#FF99D9EA"/>
     </Grid>
 </Window>
