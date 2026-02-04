@@ -23,5 +23,6 @@
             <Button x:Name="btnContact" Content="CONTACT" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
         </StackPanel>
         <Image Margin="0,10,635,303" Source="/Image/Poke.png" Stretch="Fill"/>
+        <Label Content="If any problem where to happen to this project please contact us with the following adress :&#xD;&#xA; S00295652@atu.ie" HorizontalAlignment="Left" Height="59" Margin="230,158,0,0" VerticalAlignment="Top" Width="504"/>
     </Grid>
 </Window>

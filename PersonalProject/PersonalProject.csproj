@@ -59,15 +59,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Windows\Pokedex2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Windows\Settings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\History.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Windows\Pokedex2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -94,14 +94,14 @@
     <Compile Include="Windows\Contact.xaml.cs">
       <DependentUpon>Contact.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Pokedex2.xaml.cs">
+      <DependentUpon>Pokedex2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\History.xaml.cs">
       <DependentUpon>History.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Pokedex2.xaml.cs">
-      <DependentUpon>Pokedex2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Pokedex1.xaml.cs">
       <DependentUpon>Pokedex1.xaml</DependentUpon>

@@ -23,5 +23,15 @@
             <Button x:Name="btnContact" Content="CONTACT" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
         </StackPanel>
         <Image Margin="0,10,635,303" Source="/Image/Poke.png" Stretch="Fill"/>
+        <Label Content="Type :" HorizontalAlignment="Left" Height="26" Margin="418,131,0,0" VerticalAlignment="Top" Width="261"/>
+        <Label Content="Generation :" HorizontalAlignment="Left" Height="26" Margin="418,162,0,0" VerticalAlignment="Top" Width="261"/>
+        <Label Content="HP :" HorizontalAlignment="Left" Height="26" Margin="418,193,0,0" VerticalAlignment="Top" Width="261"/>
+        <Label Content="Evolution :" HorizontalAlignment="Left" Height="26" Margin="418,224,0,0" VerticalAlignment="Top" Width="261"/>
+        <Label Content="Clue 1 :" HorizontalAlignment="Left" Height="26" Margin="418,255,0,0" VerticalAlignment="Top" Width="261"/>
+        <Label Content="Clue 2 :" HorizontalAlignment="Left" Height="26" Margin="418,286,0,0" VerticalAlignment="Top" Width="261"/>
+        <Image Margin="181,94,400,94" Source="/Image/fond bleue.png" Stretch="Fill"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="663,371,0,0" VerticalAlignment="Top" Width="78" FontSize="14"/>
+        <Button Content="Prev" HorizontalAlignment="Left" Margin="230,371,0,0" VerticalAlignment="Top" Width="78" FontSize="14"/>
+        <Label Content="NAME" HorizontalAlignment="Left" Height="44" Margin="308,27,0,0" VerticalAlignment="Top" Width="286" FontSize="24"/>
     </Grid>
 </Window>
