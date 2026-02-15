@@ -13,16 +13,47 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PersonalProject
+namespace PersonalProject.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Guess : Window
     {
-        public MainWindow()
+        public Guess()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.Manual;
+            this.Left = 0;
+            this.Top = 0;
+        }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+            this.Close();
+        }
+
+        private void btnGuess_Click(object sender, RoutedEventArgs e)
+        {
+            Guess next = new Guess();
+            next.Show();
+            this.Close();
+        }
+
+        private void btnHistory_Click(object sender, RoutedEventArgs e)
+        {
+            History next = new History();
+            next.Show();
+            this.Close();
+        }
+
+        private void btnPokedex_Click(object sender, RoutedEventArgs e)
+        {
+            Pokedex1 next = new Pokedex1();
+            next.Show();
+            this.Close();
         }
     }
 }

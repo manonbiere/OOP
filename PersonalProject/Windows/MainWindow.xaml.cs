@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PersonalProject
+namespace PersonalProject.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,16 +23,32 @@ namespace PersonalProject
         public MainWindow()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.Manual;
+            this.Left = 0;
+            this.Top = 0;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnGuess_Click(object sender, RoutedEventArgs e)
         {
-
+            Guess next = new Guess();
+            next.Show();
+            this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btnPokedex_Click(object sender, RoutedEventArgs e)
         {
-
+            Pokedex1 next = new Pokedex1();
+            next.Show();
+            this.Close();
         }
+
+        private void btnHistory_CLick(object sender, RoutedEventArgs e)
+        {
+            History next = new History();
+            next.Show();
+            this.Close();
+        }
+
     }
 }
+

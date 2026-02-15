@@ -13,16 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PersonalProject
+namespace PersonalProject.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Pokedex2 : Window
     {
-        public MainWindow()
+        public Pokedex2()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.Manual;
+            this.Left = 0;
+            this.Top = 0;
         }
     }
 }
