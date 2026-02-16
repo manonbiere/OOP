@@ -80,7 +80,7 @@ namespace PersonalProject.Windows
 
         public void RandomClue(int index)
         {
-            System.Windows.Controls.Label label = index == 1 ? lblClue1 : index == 2 ? lblClue2 : lblClue3;
+            System.Windows.Controls.TextBlock label = index == 1 ? lblClue1 : index == 2 ? lblClue2 : lblClue3;
             int random = rand.Next(1, 6);
 
             
@@ -94,19 +94,19 @@ namespace PersonalProject.Windows
             switch (random)
             {
                 case 0:
-                    label.Content = $"Clue {index} : The height of this pokemon is {toGuess.Height} cm";
+                    label.Text = $"Clue {index} : The height of this pokemon is {toGuess.Height} cm";
                     break;
                 case 1:
-                    label.Content = $"Clue {index} : The Weight of this pokemon is {toGuess.Weight} kg";
+                    label.Text = $"Clue {index} : The Weight of this pokemon is {toGuess.Weight} kg";
                     break;
                 case 2:
-                    label.Content = $"Clue {index} : {toGuess.Talent} is the talent of this pokemon";
+                    label.Text = $"Clue {index} : {toGuess.Talent} is the talent of this pokemon";
                     break;
                 case 3:
-                    label.Content = $"Clue {index} : {toGuess.Story}";
+                    label.Text = $"Clue {index} : {toGuess.Story}";
                     break;
                 case 4:
-                    label.Content = $"Clue {index} : This pokemon's index is {toGuess.Index}";
+                    label.Text = $"Clue {index} : This pokemon's index is {toGuess.Index}";
                     break;
             }
 
@@ -145,9 +145,9 @@ namespace PersonalProject.Windows
             lblGeneration.Content = $"Generation :";
             lblCategory.Content = $"Category :";
             lblEvolution.Content = $"Evolution :";
-            lblClue1.Content = $"Clue 1 :";
-            lblClue2.Content = $"Clue 2 :";
-            lblClue3.Content = $"Clue 3 :";
+            lblClue1.Text = $"Clue 1 :";
+            lblClue2.Text = $"Clue 2 :";
+            lblClue3.Text = $"Clue 3 :";
             int randomPoke = rand.Next(1, 4);
             List<Pokemon> poke = pokedex.pokemons;
             toGuess = poke[randomPoke - 1];
