@@ -9,8 +9,7 @@ namespace PersonalProject
 {
     public class Pokedex
     {
-        List<string> type {get; set;}
-        List<Pokemon> pokemons { get; set; }
+        public List<Pokemon> pokemons { get; set; }
 
         public Pokedex()
         {

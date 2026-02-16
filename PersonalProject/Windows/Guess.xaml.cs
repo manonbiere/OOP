@@ -1,6 +1,9 @@
-﻿using System;
+﻿using PersonalProject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,17 +23,31 @@ namespace PersonalProject.Windows
     /// </summary>
     public partial class Guess : Window
     {
+        public Random rand = new Random();
+        public Pokedex pokedex = new Pokedex();
         public Pokemon toGuess;
         public int nbClues;
         public int streak;
         public int totalWin;
-        public List<int> clues = new List<int>();
+        public List<int> clues;
+        public int higheststreak;
         public Guess()
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             this.Left = 0;
             this.Top = 0;
+
+            List<Pokemon> poke = pokedex.pokemons;
+            for (int i = 0; i < poke.Count; i++)
+            {
+                lbxPokemon.Items.Add(poke[i].Name);
+            }
+
+            Start();
+            streak = 0;
+            totalWin = 0;
+            higheststreak = 0;
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
@@ -61,53 +78,115 @@ namespace PersonalProject.Windows
             this.Close();
         }
 
-        public void RandomClue(int num)
+        public void RandomClue(int index)
         {
-            Random rand = new Random();
-            int random = rand.Next(1, num);
-            foreach (int i in clues) 
-            { 
-                if (i == random)
-                {
-                    random = rand.Next(1, num);
-                }
+            System.Windows.Controls.Label label = index == 1 ? lblClue1 : index == 2 ? lblClue2 : lblClue3;
+            int random = rand.Next(1, 6);
+
+            
+            while (clues.Any(x => x == random))
+            {
+                random = rand.Next(1, 6);
             }
+
+            clues.Add(random);
+
+            switch (random)
+            {
+                case 0:
+                    label.Content = $"Clue {index} : The height of this pokemon is {toGuess.Height} cm";
+                    break;
+                case 1:
+                    label.Content = $"Clue {index} : The Weight of this pokemon is {toGuess.Weight} kg";
+                    break;
+                case 2:
+                    label.Content = $"Clue {index} : {toGuess.Talent} is the talent of this pokemon";
+                    break;
+                case 3:
+                    label.Content = $"Clue {index} : {toGuess.Story}";
+                    break;
+                case 4:
+                    label.Content = $"Clue {index} : This pokemon's index is {toGuess.Index}";
+                    break;
+            }
+
         }
 
         public void NextClue(int clue)
         {
-            if (clue == 0)
+            switch (clue)
             {
-                lblType.Content = "Type : " + toGuess.Type;
+                case 0:
+                    lblType.Content = "Type : " + toGuess.Type;
+                    break;
+                case 1:
+                    lblGeneration.Content = "Generation : " + toGuess.Generation;
+                    break;
+                case 2:
+                    lblCategory.Content = "Category : " + toGuess.Category;
+                    break;
+                case 3:
+                    lblEvolution.Content = "Evolution : " + toGuess.Evolution;
+                    break;
+                case 4:
+                    RandomClue(1);
+                    break;
+                case 5:
+                    RandomClue(2);
+                    break;
+                case 6:
+                    RandomClue(3);
+                    break;
             }
-            if (clue == 1)
+        }
+        public void Start()
+        {
+            lblType.Content = $"Type :";
+            lblGeneration.Content = $"Generation :";
+            lblCategory.Content = $"Category :";
+            lblEvolution.Content = $"Evolution :";
+            lblClue1.Content = $"Clue 1 :";
+            lblClue2.Content = $"Clue 2 :";
+            lblClue3.Content = $"Clue 3 :";
+            int randomPoke = rand.Next(1, 4);
+            List<Pokemon> poke = pokedex.pokemons;
+            toGuess = poke[randomPoke - 1];
+            clues = new List<int>();
+            nbClues = 0;
+            NextClue(nbClues);
+            nbClues++;
+        }
+
+        private void lbxPokemon_SelectionChange(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox combo = sender as ComboBox;
+            string choosen = combo.SelectedItem as string;
+            if(choosen == toGuess.Name)
             {
-                lblGeneration.Content = "Generation :" + toGuess.Generation;
-            }
-            if (clue == 2)
-            {
-                lblCategory.Content = "Category : " + toGuess.Category;
-            }
-            if (clue == 3)
-            {
-                lblEvolution.Content = "Evolution :" + toGuess.Evolution;
+                Start();
+                streak += 1;
+                lblStrike.Content = $"Strike = {streak}";
+                totalWin += 1;
+                lblTotalWin.Content = $"Total Win = {totalWin}";
+                if( streak > higheststreak )
+                {
+                    higheststreak = streak;
+                    lblHighestStrike.Content = $"Highest Strike Count = {higheststreak}";
+                }
             }
             else
-            {                
-                if (clue == 4)
+            {
+                if(nbClues == 7)
                 {
-                    RandomClue(5);
+                    streak = 0;
+                    Start();
                 }
-                if (clue == 5)
+                else
                 {
-                    lblClue2.Content = "Clue 2 : " + toGuess.Category;
-                }
-                if (clue == 6)
-                {
-                    lblClue3.Content = "Clue 3 :" + toGuess.Evolution;
+                    NextClue(nbClues);
+                    nbClues++;
                 }
             }
-            
         }
     }
 }

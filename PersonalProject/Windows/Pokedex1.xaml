@@ -5,49 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PersonalProject.Windows"
         mc:Ignorable="d"
-        Title="Pokedex1" Height="450" Width="800"
+        Title="Pokedex1" Height="500" Width="800"
         ResizeMode="CanResize"
         WindowStyle="ToolWindow">
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="155">
+        <StackPanel HorizontalAlignment="Left" Height="500" VerticalAlignment="Center" Width="155">
             <Image Height="648" Source="/Image/fond bleue.png" Stretch="Fill" Width="1152"/>
         </StackPanel>
-        
+
         <StackPanel HorizontalAlignment="Left" Height="228" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.565,0.351">
             <Button x:Name="btnHome" Content=" " FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Height="144" Click="btnHome_Click"/>
             <Button x:Name="btnGuess" Content="GUESS" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Click="btnGuess_Click"/>
             <Button x:Name="btnPokedex" Content="POKEDEX" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Click="btnPokedex_Click"/>
             <Button x:Name="btnHistory" Content="HISTORY" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Click="btnHistory_Click"/>
         </StackPanel>
-        
-        <Image Margin="0,10,635,303" Source="/Image/Poke.png" Stretch="Fill"/>
-        <Image Margin="309,8,403,321" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="438,8,274,321" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="565,8,147,321" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="687,8,25,321" Source="/Image/fond bleue.png" Stretch="Fill"/>
+
+        <Image Margin="0,10,0,0" Source="/Image/Poke.png" Stretch="Fill" Height="121" VerticalAlignment="Top" HorizontalAlignment="Left" Width="165"/>
+        <Image Margin="309,8,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="438,8,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="565,8,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="687,8,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="334,117,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="463,117,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="590,117,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="712,117,0,0" VerticalAlignment="Top"/>
-        <Image Margin="182,151,530,178" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="309,151,403,178" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="438,151,274,178" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="565,151,147,178" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="687,151,25,178" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="207,260,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="334,260,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="463,260,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="590,260,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="712,260,0,0" VerticalAlignment="Top"/>
-        <Image Margin="182,289,530,40" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="309,289,403,40" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="438,289,274,40" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Image Margin="565,289,147,40" Source="/Image/fond bleue.png" Stretch="Fill"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="207,398,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="334,398,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="463,398,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="590,398,0,0" VerticalAlignment="Top"/>
+        <Image Margin="182,159,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="309,159,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="438,159,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="565,159,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="687,159,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="207,268,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="334,268,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="463,268,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="590,268,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="712,268,0,0" VerticalAlignment="Top"/>
+        <Image Margin="182,307,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="309,307,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="438,307,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Image Margin="565,307,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="207,416,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="334,416,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="463,416,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="590,416,0,0" VerticalAlignment="Top"/>
         <Button Content="PREV" HorizontalAlignment="Left" Margin="182,8,0,0" VerticalAlignment="Top" Height="105" Width="88" Background="#FF99D9EA"/>
-        <Button Content="NEXT" HorizontalAlignment="Left" Margin="687,289,0,0" VerticalAlignment="Top" Height="105" Width="88" Background="#FF99D9EA"/>
+        <Button Content="NEXT" HorizontalAlignment="Left" Margin="687,307,0,0" VerticalAlignment="Top" Height="105" Width="88" Background="#FF99D9EA"/>
     </Grid>
 </Window>
