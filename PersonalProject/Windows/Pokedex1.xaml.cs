@@ -20,6 +20,7 @@ namespace PersonalProject.Windows
     /// </summary>
     public partial class Pokedex1 : Window
     {
+        public Pokemon Clicked { get; set; }
         public Pokedex1()
         {
             InitializeComponent();
@@ -52,6 +53,13 @@ namespace PersonalProject.Windows
         private void btnHistory_Click(object sender, RoutedEventArgs e)
         {
             History next = new History();
+            next.Show();
+            this.Close();
+        }
+
+        private void btnPoke1_Click(object sender, RoutedEventArgs e)
+        {
+            Pokedex2 next = new Pokedex2();
             next.Show();
             this.Close();
         }

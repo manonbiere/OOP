@@ -31,6 +31,8 @@ namespace PersonalProject.Windows
         public int totalWin;
         public List<int> clues;
         public int higheststreak;
+        public string guessed;
+        public bool found;
         public Guess()
         {
             InitializeComponent();
@@ -141,6 +143,9 @@ namespace PersonalProject.Windows
         }
         public void Start()
         {
+            btnNext.Opacity = 0;
+            found = false;
+            lbxPokemon.Text = ""; 
             lblType.Content = $"Type :";
             lblGeneration.Content = $"Generation :";
             lblCategory.Content = $"Category :";
@@ -148,11 +153,12 @@ namespace PersonalProject.Windows
             lblClue1.Text = $"Clue 1 :";
             lblClue2.Text = $"Clue 2 :";
             lblClue3.Text = $"Clue 3 :";
-            int randomPoke = rand.Next(1, 4);
+
+            nbClues = 0; 
             List<Pokemon> poke = pokedex.pokemons;
+            int randomPoke = rand.Next(1, poke.Count + 1);
             toGuess = poke[randomPoke - 1];
             clues = new List<int>();
-            nbClues = 0;
             NextClue(nbClues);
             nbClues++;
         }
@@ -160,32 +166,58 @@ namespace PersonalProject.Windows
         private void lbxPokemon_SelectionChange(object sender, SelectionChangedEventArgs e)
         {
             ComboBox combo = sender as ComboBox;
-            string choosen = combo.SelectedItem as string;
-            if(choosen == toGuess.Name)
+            guessed = combo.SelectedItem as string;
+            if(guessed == toGuess.Name)
             {
-                Start();
-                streak += 1;
-                lblStrike.Content = $"Strike = {streak}";
-                totalWin += 1;
-                lblTotalWin.Content = $"Total Win = {totalWin}";
-                if( streak > higheststreak )
-                {
-                    higheststreak = streak;
-                    lblHighestStrike.Content = $"Highest Strike Count = {higheststreak}";
-                }
+                btnNext.Opacity = 1;
+                found = true;
             }
             else
             {
                 if(nbClues == 7)
                 {
-                    streak = 0;
-                    Start();
+                    btnNext.Opacity = 1;
                 }
                 else
                 {
                     NextClue(nbClues);
                     nbClues++;
                 }
+            }
+        }
+
+        private void btnSkip_Click(object sender, RoutedEventArgs e)
+        {
+            if (streak > higheststreak)
+            {
+                higheststreak = streak;
+                lblHighestStrike.Content = $"Highest Streak Count = {higheststreak}";
+            }
+            streak = 0;
+            lblStrike.Content = $"Streak = {streak}";
+            Start();
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            if (found)
+            {
+                streak += 1;
+                lblStrike.Content = $"Streak = {streak}";
+                totalWin += 1;
+                lblTotalWin.Content = $"Total Win = {totalWin}";
+                if (streak > higheststreak)
+                {
+                    higheststreak = streak;
+                    lblHighestStrike.Content = $"Highest Streak Count = {higheststreak}";
+                }
+                Start();
+            }
+            else
+            {
+                streak = 0;
+                lblStrike.Content = $"Streak = {streak}";
+                Start();
             }
         }
     }

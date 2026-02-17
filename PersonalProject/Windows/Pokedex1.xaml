@@ -49,5 +49,18 @@
         <Label Content="Label" HorizontalAlignment="Left" Margin="590,416,0,0" VerticalAlignment="Top"/>
         <Button Content="PREV" HorizontalAlignment="Left" Margin="182,8,0,0" VerticalAlignment="Top" Height="105" Width="88" Background="#FF99D9EA"/>
         <Button Content="NEXT" HorizontalAlignment="Left" Margin="687,307,0,0" VerticalAlignment="Top" Height="105" Width="88" Background="#FF99D9EA"/>
+        <Button x:Name="btnPoke1" Content="Button" HorizontalAlignment="Left" Height="137" Margin="305,4,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke1_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="137" Margin="434,4,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="137" Margin="561,4,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="137" Margin="683,4,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}"/>
+        <Button x:Name="btnPoke1_Copy" Content="Button" HorizontalAlignment="Left" Height="137" Margin="305,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke1_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="137" Margin="434,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="137" Margin="561,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="137" Margin="683,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}"/>
+        <Button x:Name="btnPoke1_Copy1" Content="Button" HorizontalAlignment="Left" Height="137" Margin="178,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke1_Click"/>
+        <Button x:Name="btnPoke1_Copy2" Content="Button" HorizontalAlignment="Left" Height="137" Margin="305,303,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke1_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="137" Margin="434,303,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="137" Margin="561,303,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}"/>
+        <Button x:Name="btnPoke1_Copy3" Content="Button" HorizontalAlignment="Left" Height="137" Margin="178,303,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke1_Click"/>
     </Grid>
 </Window>

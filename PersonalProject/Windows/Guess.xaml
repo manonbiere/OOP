@@ -22,19 +22,20 @@
         <TextBlock x:Name="lblClue3" Text="Clue 3 :" Margin="418,291,0,0" Height="56" VerticalAlignment="Top" HorizontalAlignment="Left" Width="342" TextWrapping="Wrap"/>
         <TextBlock x:Name="lblClue2" Text="Clue 2 :" Margin="418,260,40,0" Height="31" VerticalAlignment="Top" TextWrapping="Wrap"/>
         <TextBlock x:Name="lblClue1" Text="Clue 1 :" Margin="418,229,40,0" Height="31" VerticalAlignment="Top" TextWrapping="Wrap"/>
-        <Label x:Name="lblEvolution" Content="Evolution :" HorizontalAlignment="Left" Margin="418,198,0,0" Width="342" Height="76" VerticalAlignment="Top"/>
-        <Label x:Name="lblCategory" Content="Category :" HorizontalAlignment="Left" Margin="418,167,0,0" Width="342" Height="76" VerticalAlignment="Top"/>
+        <Label x:Name="lblEvolution" Content="Evolution :" HorizontalAlignment="Left" Margin="412,194,0,0" Width="342" Height="76" VerticalAlignment="Top"/>
+        <Label x:Name="lblCategory" Content="Category :" HorizontalAlignment="Left" Margin="412,166,0,0" Width="342" Height="76" VerticalAlignment="Top"/>
 
-        <Label x:Name="lblGeneration" Content="Generation :" HorizontalAlignment="Left" Margin="418,136,0,0" Width="342" Height="76" VerticalAlignment="Top"/>
-        <Label x:Name="lblType" Content="Type :" HorizontalAlignment="Left" Margin="418,105,0,0" Width="342" Height="76" VerticalAlignment="Top"/>
+        <Label x:Name="lblGeneration" Content="Generation :" HorizontalAlignment="Left" Margin="412,137,0,0" Width="342" Height="76" VerticalAlignment="Top"/>
+        <Label x:Name="lblType" Content="Type :" HorizontalAlignment="Left" Margin="412,108,0,0" Width="342" Height="76" VerticalAlignment="Top"/>
 
         <Image Margin="181,89,0,0" Source="/Image/fond bleue.png" Stretch="Fill" HorizontalAlignment="Left" Width="219" Height="228" VerticalAlignment="Top"/>
-        <Button Content="   SKIP   " HorizontalAlignment="Left" Margin="672,353,0,0" VerticalAlignment="Top" Width="88" Background="#FF99D9EA"/>
+        <Button x:Name="btnSkip" Content="   SKIP   " HorizontalAlignment="Left" Margin="672,353,0,0" VerticalAlignment="Top" Width="88" Background="#FF99D9EA" Click="btnSkip_Click"/>
         <ComboBox x:Name="lbxPokemon" HorizontalAlignment="Left" Margin="344,352,0,0" VerticalAlignment="Top" Width="187" SelectionChanged="lbxPokemon_SelectionChange"/>
         <Label Content="Your Guess :" HorizontalAlignment="Left" Margin="253,350,0,0" VerticalAlignment="Top"/>
 
-        <Label x:Name="lblStrike" Content="Strike = 0" HorizontalAlignment="Left" Margin="253,28,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblStrike" Content="Streak = 0" HorizontalAlignment="Left" Margin="253,28,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTotalWin" Content="Total Win = 0" HorizontalAlignment="Left" Margin="418,28,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblHighestStrike" Content="Highest Strike = 0" HorizontalAlignment="Left" Margin="598,28,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblHighestStrike" Content="Highest Streak = 0" HorizontalAlignment="Left" Margin="598,28,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnNext" Content="   NEXT   " HorizontalAlignment="Left" Margin="672,394,0,0" VerticalAlignment="Top" Width="88" Background="#FF99D9EA" Click="btnNext_Click"/>
     </Grid>
 </Window>
