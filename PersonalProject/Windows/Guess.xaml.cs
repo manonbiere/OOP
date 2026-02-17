@@ -33,6 +33,7 @@ namespace PersonalProject.Windows
         public int higheststreak;
         public string guessed;
         public bool found;
+        public bool opac = true;
         public Guess()
         {
             InitializeComponent();
@@ -83,12 +84,12 @@ namespace PersonalProject.Windows
         public void RandomClue(int index)
         {
             System.Windows.Controls.TextBlock label = index == 1 ? lblClue1 : index == 2 ? lblClue2 : lblClue3;
-            int random = rand.Next(1, 6);
+            int random = rand.Next(1, 5);
 
             
             while (clues.Any(x => x == random))
             {
-                random = rand.Next(1, 6);
+                random = rand.Next(1, 5);
             }
 
             clues.Add(random);
@@ -144,6 +145,7 @@ namespace PersonalProject.Windows
         public void Start()
         {
             btnNext.Opacity = 0;
+            opac = true;
             found = false;
             lbxPokemon.Text = ""; 
             lblType.Content = $"Type :";
@@ -170,6 +172,7 @@ namespace PersonalProject.Windows
             if(guessed == toGuess.Name)
             {
                 btnNext.Opacity = 1;
+                opac = false;
                 found = true;
             }
             else
@@ -177,6 +180,7 @@ namespace PersonalProject.Windows
                 if(nbClues == 7)
                 {
                     btnNext.Opacity = 1;
+                    opac = false;
                 }
                 else
                 {
@@ -200,24 +204,27 @@ namespace PersonalProject.Windows
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            if (found)
+            if (!opac)
             {
-                streak += 1;
-                lblStrike.Content = $"Streak = {streak}";
-                totalWin += 1;
-                lblTotalWin.Content = $"Total Win = {totalWin}";
-                if (streak > higheststreak)
+                if (found)
                 {
-                    higheststreak = streak;
-                    lblHighestStrike.Content = $"Highest Streak Count = {higheststreak}";
+                    streak += 1;
+                    lblStrike.Content = $"Streak = {streak}";
+                    totalWin += 1;
+                    lblTotalWin.Content = $"Total Win = {totalWin}";
+                    if (streak > higheststreak)
+                    {
+                        higheststreak = streak;
+                        lblHighestStrike.Content = $"Highest Streak Count = {higheststreak}";
+                    }
+                    Start();
                 }
-                Start();
-            }
-            else
-            {
-                streak = 0;
-                lblStrike.Content = $"Streak = {streak}";
-                Start();
+                else
+                {
+                    streak = 0;
+                    lblStrike.Content = $"Streak = {streak}";
+                    Start();
+                }
             }
         }
     }

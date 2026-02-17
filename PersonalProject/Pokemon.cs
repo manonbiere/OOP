@@ -19,10 +19,11 @@ namespace PersonalProject
         public int Generation { get; set; }
         public string Evolution { get; set; }
         public string Story { get; set; }
+        public string History {  get; set; }
 
 
         // Constructor
-        public Pokemon(string name, double height, double weight, string category, string talent, string type, int generation, string evolution, string story, int index)
+        public Pokemon(string name, double height, double weight, string category, string talent, string type, int generation, string evolution, string story, int index, string history)
         {
             Name = name;
             Type = type;
@@ -34,6 +35,7 @@ namespace PersonalProject
             Weight = weight;
             Category = category;
             Talent = talent;
+            History = history;
         }
 
         public Pokemon(){ }
