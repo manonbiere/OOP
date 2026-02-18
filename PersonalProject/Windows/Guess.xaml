@@ -37,6 +37,6 @@
         <Label x:Name="lblTotalWin" Content="Total Win = 0" HorizontalAlignment="Left" Margin="418,28,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblHighestStrike" Content="Highest Streak = 0" HorizontalAlignment="Left" Margin="598,28,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnNext" Content="   NEXT   " HorizontalAlignment="Left" Margin="672,374,0,0" VerticalAlignment="Top" Width="88" Background="#FF99D9EA" Click="btnNext_Click"/>
-        <TextBlock x:Name="txbResult" HorizontalAlignment="Left" Margin="329,384,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Height="38" Width="278" FontSize="18"/>
+        <TextBlock x:Name="txbResult" HorizontalAlignment="Left" Margin="329,384,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Height="75" Width="278" FontSize="18"/>
     </Grid>
 </Window>

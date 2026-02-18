@@ -155,6 +155,7 @@ namespace PersonalProject.Windows
             lblClue1.Text = $"Clue 1 :";
             lblClue2.Text = $"Clue 2 :";
             lblClue3.Text = $"Clue 3 :";
+            txbResult.Text = $"";
 
             nbClues = 0; 
             List<Pokemon> poke = pokedex.pokemons;
@@ -172,6 +173,7 @@ namespace PersonalProject.Windows
             if(guessed == toGuess.Name)
             {
                 btnNext.Opacity = 1;
+                txbResult.Text = $"SUCESS";
                 opac = false;
                 found = true;
             }
@@ -180,6 +182,7 @@ namespace PersonalProject.Windows
                 if(nbClues == 7)
                 {
                     btnNext.Opacity = 1;
+                    txbResult.Text = $"THE POKEMON TO GUESS WAS {toGuess.Name}";
                     opac = false;
                 }
                 else
