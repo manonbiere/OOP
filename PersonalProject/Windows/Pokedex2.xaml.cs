@@ -20,12 +20,19 @@ namespace PersonalProject.Windows
     /// </summary>
     public partial class Pokedex2 : Window
     {
-        public Pokedex2()
+        public Pokedex pokedex;
+        public int nowSeeing;
+        public Pokemon Actual;
+        public Pokedex2(Pokedex pokedex1)
         {
+            pokedex = pokedex1;
+            nowSeeing = pokedex.LastAsked;
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             this.Left = 0;
             this.Top = 0;
+
+
         }
     }
 }
