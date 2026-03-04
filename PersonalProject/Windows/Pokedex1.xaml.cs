@@ -24,8 +24,9 @@ namespace PersonalProject.Windows
         public Pokemon Clicked { get; set; }
         public List<Pokemon> list;
         public Pokedex pokedex;
-        int first = 1;
+        int first = 0;
         int numPokes = 13;
+        bool last = false;
 
         public Pokedex1()
         {
@@ -40,8 +41,12 @@ namespace PersonalProject.Windows
             for(int i = 0; i < numPokes; i++)
             {
                 list.Add(pokedex.pokemons[i]);
-                System.Windows.Controls.Label label = i == 1 ? lblpoke1 : i == 2 ? lblpoke2 : i == 3 ? lblpoke3 : i == 4 ? lblpoke4 : i == 5 ? lblpoke5 : i == 6 ? lblpoke6 : label = i == 7 ? lblpoke7 : i == 7 ? lblpoke7 : i == 8 ? lblpoke8 : i == 9 ? lblpoke9 : i == 10 ? lblpoke10 : i == 11 ? lblpoke11 : i == 12 ? lblpoke12 : lblpoke13;
+                System.Windows.Controls.Label label = i == 0 ? lblpoke1 : i == 1 ? lblpoke2 : i == 2 ? lblpoke3 : i == 3 ? lblpoke4 : i == 4 ? lblpoke5 : i == 5 ? lblpoke6 : i == 6 ? lblpoke7 : i == 7 ? lblpoke8 : i == 8 ? lblpoke9 : i == 9 ? lblpoke10 : i == 10 ? lblpoke11 : i == 11 ? lblpoke12 : lblpoke13;
                 label.Content = pokedex.pokemons[i].Name;
+
+                System.Windows.Controls.Image image = i == 0 ? imgPoke1 : i == 1 ? imgPoke2 : i == 2 ? imgPoke3 : i == 3 ? imgPoke4 : i == 4 ? imgPoke5 : i == 5 ? imgPoke6 : i == 6 ? imgPoke7 : i == 7 ? imgPoke8 : i == 8 ? imgPoke9 : i == 9 ? imgPoke10 : i == 10 ? imgPoke11 : i == 11 ? imgPoke12 : imgPoke13;
+                string way = $"/Image/Pokemons/{pokedex.pokemons[i].Index}.png";
+                image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
             }
         }
 
@@ -179,32 +184,107 @@ namespace PersonalProject.Windows
 
         private void btnPrev_Click(object sender, RoutedEventArgs e)
         {
-            if (first != 1)
+            if (first != 0)
             {
+                if (last)
+                {
+                    for (int i = 0; i < numPokes; i++)
+                    {
+                        System.Windows.Controls.Button button = i == 0 ? btnPoke1 : i == 1 ? btnPoke2 : i == 2 ? btnPoke3 : i == 3 ? btnPoke4 : i == 4 ? btnPoke5 : i == 5 ? btnPoke6 : i == 6 ? btnPoke7 : i == 7 ? btnPoke8 : i == 8 ? btnPoke9 : i == 9 ? btnPoke10 : i == 10 ? btnPoke11 : i == 11 ? btnPoke12 : btnPoke13;
+                        button.Opacity = 1;
+
+                        System.Windows.Controls.Image image = i == 0 ? imgPoke1 : i == 1 ? imgPoke2 : i == 2 ? imgPoke3 : i == 3 ? imgPoke4 : i == 4 ? imgPoke5 : i == 5 ? imgPoke6 : i == 6 ? imgPoke7 : i == 7 ? imgPoke8 : i == 8 ? imgPoke9 : i == 9 ? imgPoke10 : i == 10 ? imgPoke11 : i == 11 ? imgPoke12 : imgPoke13;
+                        image.Opacity = 1;
+                    }
+                    last = false;
+                }
+
                 first -= 13;
                 list.Clear();
+
                 for (int j = first; j < numPokes + first; j++)
                 {
-                    int i = j - first + 1;
+                    int i = j - first;
                     list.Add(pokedex.pokemons[j]);
-                    System.Windows.Controls.Label label = i == 1 ? lblpoke1 : i == 2 ? lblpoke2 : i == 3 ? lblpoke3 : i == 4 ? lblpoke4 : i == 5 ? lblpoke5 : i == 6 ? lblpoke6 : label = i == 7 ? lblpoke1 : i == 7 ? lblpoke7 : i == 8 ? lblpoke8 : i == 9 ? lblpoke9 : i == 10 ? lblpoke10 : i == 11 ? lblpoke11 : i == 12 ? lblpoke12 : lblpoke13;
+
+                    System.Windows.Controls.Label label = i == 0 ? lblpoke1 : i == 1 ? lblpoke2 : i == 2 ? lblpoke3 : i == 3 ? lblpoke4 : i == 4 ? lblpoke5 : i == 5 ? lblpoke6 : i == 6 ? lblpoke7 : i == 7 ? lblpoke8 : i == 8 ? lblpoke9 : i == 9 ? lblpoke10 : i == 10 ? lblpoke11 : i == 11 ? lblpoke12 : lblpoke13; 
                     label.Content = pokedex.pokemons[j].Name;
+
+                    System.Windows.Controls.Image image = i == 0 ? imgPoke1 : i == 1 ? imgPoke2 : i == 2 ? imgPoke3 : i == 3 ? imgPoke4 : i == 4 ? imgPoke5 : i == 5 ? imgPoke6 : i == 6 ? imgPoke7 : i == 7 ? imgPoke8 : i == 8 ? imgPoke9 : i == 9 ? imgPoke10 : i == 10 ? imgPoke11 : i == 11 ? imgPoke12 : imgPoke13;
+                    if (pokedex.pokemons[j].Index < 90 ) 
+                    {
+                        string way = $"/Image/Pokemons/{pokedex.pokemons[j].Index}.png";
+                        image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                    }
+                    else
+                    {
+                        string way = $"/Image/fond bleue.png";
+                        image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                    }
                 }
             }
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            if (first + numPokes < pokedex.pokemons.Count)
+            if (first + 2 * numPokes < pokedex.pokemons.Count)
             {
+                Console.WriteLine("first = " + first);
+                last = false;
                 first += 13;
                 list.Clear();
                 for (int j = first; j < numPokes + first && j < pokedex.pokemons.Count; j++)
                 {
-                    int i = j - first + 1;
+                    int i = j - first;
                     list.Add(pokedex.pokemons[j]);
-                    System.Windows.Controls.Label label = i == 1 ? lblpoke1 : i == 2 ? lblpoke2 : i == 3 ? lblpoke3 : i == 4 ? lblpoke4 : i == 5 ? lblpoke5 : i == 6 ? lblpoke6 : label = i == 7 ? lblpoke7 : i == 7 ? lblpoke7 : i == 8 ? lblpoke8 : i == 9 ? lblpoke9 : i == 10 ? lblpoke10 : i == 11 ? lblpoke11 : i == 12 ? lblpoke12 : lblpoke13;
+                    
+                    System.Windows.Controls.Label label = i == 0 ? lblpoke1 : i == 1 ? lblpoke2 : i == 2 ? lblpoke3 : i == 3 ? lblpoke4 : i == 4 ? lblpoke5 : i == 5 ? lblpoke6 : i == 6 ? lblpoke7 : i == 7 ? lblpoke8 : i == 8 ? lblpoke9 : i == 9 ? lblpoke10 : i == 10 ? lblpoke11 : i == 11 ? lblpoke12 : lblpoke13; 
                     label.Content = pokedex.pokemons[j].Name;
+
+                    System.Windows.Controls.Image image = i == 0 ? imgPoke1 : i == 1 ? imgPoke2 : i == 2 ? imgPoke3 : i == 3 ? imgPoke4 : i == 4 ? imgPoke5 : i == 5 ? imgPoke6 : i == 6 ? imgPoke7 : i == 7 ? imgPoke8 : i == 8 ? imgPoke9 : i == 9 ? imgPoke10 : i == 10 ? imgPoke11 : i == 11 ? imgPoke12 : imgPoke13;
+                    if (pokedex.pokemons[j].Index < 90)
+                    {
+                        string way = $"/Image/Pokemons/{pokedex.pokemons[j].Index}.png";
+                        image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                    }
+                    else
+                    {
+                        string way = $"/Image/fond bleue.png";
+                        image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                    }
+                }
+            }
+            else
+            {
+                if (!last)
+                {
+                    Console.WriteLine("first = " + first);
+                    first += 13;
+                    list.Clear();
+                    int j = first;
+                    while(j < pokedex.pokemons.Count)
+                    {
+                        int i = j - first;
+                        list.Add(pokedex.pokemons[j]);
+                        System.Windows.Controls.Label label = i == 0 ? lblpoke1 : i == 1 ? lblpoke2 : i == 2 ? lblpoke3 : i == 3 ? lblpoke4 : i == 4 ? lblpoke5 : i == 5 ? lblpoke6 : i == 6 ? lblpoke7 : i == 7 ? lblpoke8 : i == 8 ? lblpoke9 : i == 9 ? lblpoke10 : i == 10 ? lblpoke11 : i == 11 ? lblpoke12 : lblpoke13; 
+                        label.Content = pokedex.pokemons[j].Name;
+                        j++;
+                    }
+                    Console.WriteLine("first = " + first);
+                    while (j < first + numPokes)
+                    {
+                        int i = j - first;
+                        //list.Add(pokedex.pokemons[j]);
+                        System.Windows.Controls.Label label = i == 0 ? lblpoke1 : i == 1 ? lblpoke2 : i == 2 ? lblpoke3 : i == 3 ? lblpoke4 : i == 4 ? lblpoke5 : i == 5 ? lblpoke6 : i == 6 ? lblpoke7 : i == 7 ? lblpoke8 : i == 8 ? lblpoke9 : i == 9 ? lblpoke10 : i == 10 ? lblpoke11 : i == 11 ? lblpoke12 : lblpoke13; 
+                        label.Content = "";
+                        System.Windows.Controls.Button button = i == 0 ? btnPoke1 : i == 1 ? btnPoke2 : i == 2 ? btnPoke3 : i == 3 ? btnPoke4 : i == 4 ? btnPoke5 : i == 5 ? btnPoke6 : i == 6 ? btnPoke7 : i == 7 ? btnPoke8 : i == 8 ? btnPoke9 : i == 9 ? btnPoke10 : i == 10 ? btnPoke11 : i == 11 ? btnPoke12 : btnPoke13;
+                        button.Opacity = 0;
+                        System.Windows.Controls.Image image = i == 0 ? imgPoke1 : i == 1 ? imgPoke2 : i == 2 ? imgPoke3 : i == 3 ? imgPoke4 : i == 4 ? imgPoke5 : i == 5 ? imgPoke6 : i == 6 ? imgPoke7 : i == 7 ? imgPoke8 : i == 8 ? imgPoke9 : i == 9 ? imgPoke10 : i == 10 ? imgPoke11 : i == 11 ? imgPoke12 : imgPoke13;
+                        image.Opacity = 0;
+                        j++;
+                    }
+                    last = true;
+                    Console.WriteLine("first = " + first);
                 }
             }
         }

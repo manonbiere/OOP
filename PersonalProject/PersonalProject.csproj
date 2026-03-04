@@ -130,5 +130,102 @@
   <ItemGroup>
     <Resource Include="Image\Poke.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Pokemons\1.png" />
+    <Resource Include="Image\Pokemons\10.png" />
+    <Resource Include="Image\Pokemons\11.png" />
+    <Resource Include="Image\Pokemons\12.png" />
+    <Resource Include="Image\Pokemons\13.png" />
+    <Resource Include="Image\Pokemons\2.png" />
+    <Resource Include="Image\Pokemons\3.png" />
+    <Resource Include="Image\Pokemons\4.png" />
+    <Resource Include="Image\Pokemons\5.png" />
+    <Resource Include="Image\Pokemons\6.png" />
+    <Resource Include="Image\Pokemons\7.png" />
+    <Resource Include="Image\Pokemons\8.png" />
+    <Resource Include="Image\Pokemons\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Pokemons\14.png" />
+    <Resource Include="Image\Pokemons\15.png" />
+    <Resource Include="Image\Pokemons\16.png" />
+    <Resource Include="Image\Pokemons\17.png" />
+    <Resource Include="Image\Pokemons\18.png" />
+    <Resource Include="Image\Pokemons\19.png" />
+    <Resource Include="Image\Pokemons\20.png" />
+    <Resource Include="Image\Pokemons\21.png" />
+    <Resource Include="Image\Pokemons\22.png" />
+    <Resource Include="Image\Pokemons\23.png" />
+    <Resource Include="Image\Pokemons\24.png" />
+    <Resource Include="Image\Pokemons\25.png" />
+    <Resource Include="Image\Pokemons\26.png" />
+    <Resource Include="Image\Pokemons\27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Pokemons\28.png" />
+    <Resource Include="Image\Pokemons\29.png" />
+    <Resource Include="Image\Pokemons\30.png" />
+    <Resource Include="Image\Pokemons\31.png" />
+    <Resource Include="Image\Pokemons\32.png" />
+    <Resource Include="Image\Pokemons\33.png" />
+    <Resource Include="Image\Pokemons\34.png" />
+    <Resource Include="Image\Pokemons\35.png" />
+    <Resource Include="Image\Pokemons\36.png" />
+    <Resource Include="Image\Pokemons\37.png" />
+    <Resource Include="Image\Pokemons\38.png" />
+    <Resource Include="Image\Pokemons\39.png" />
+    <Resource Include="Image\Pokemons\40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Pokemons\41.png" />
+    <Resource Include="Image\Pokemons\42.png" />
+    <Resource Include="Image\Pokemons\43.png" />
+    <Resource Include="Image\Pokemons\44.png" />
+    <Resource Include="Image\Pokemons\45.png" />
+    <Resource Include="Image\Pokemons\46.png" />
+    <Resource Include="Image\Pokemons\47.png" />
+    <Resource Include="Image\Pokemons\48.png" />
+    <Resource Include="Image\Pokemons\49.png" />
+    <Resource Include="Image\Pokemons\50.png" />
+    <Resource Include="Image\Pokemons\51.png" />
+    <Resource Include="Image\Pokemons\52.png" />
+    <Resource Include="Image\Pokemons\53.png" />
+    <Resource Include="Image\Pokemons\54.png" />
+    <Resource Include="Image\Pokemons\55.png" />
+    <Resource Include="Image\Pokemons\56.png" />
+    <Resource Include="Image\Pokemons\57.png" />
+    <Resource Include="Image\Pokemons\58.png" />
+    <Resource Include="Image\Pokemons\59.png" />
+    <Resource Include="Image\Pokemons\60.png" />
+    <Resource Include="Image\Pokemons\61.png" />
+    <Resource Include="Image\Pokemons\62.png" />
+    <Resource Include="Image\Pokemons\63.png" />
+    <Resource Include="Image\Pokemons\64.png" />
+    <Resource Include="Image\Pokemons\65.png" />
+    <Resource Include="Image\Pokemons\66.png" />
+    <Resource Include="Image\Pokemons\67.png" />
+    <Resource Include="Image\Pokemons\68.png" />
+    <Resource Include="Image\Pokemons\69.png" />
+    <Resource Include="Image\Pokemons\70.png" />
+    <Resource Include="Image\Pokemons\71.png" />
+    <Resource Include="Image\Pokemons\72.png" />
+    <Resource Include="Image\Pokemons\73.png" />
+    <Resource Include="Image\Pokemons\74.png" />
+    <Resource Include="Image\Pokemons\75.png" />
+    <Resource Include="Image\Pokemons\76.png" />
+    <Resource Include="Image\Pokemons\77.png" />
+    <Resource Include="Image\Pokemons\78.png" />
+    <Resource Include="Image\Pokemons\79.png" />
+    <Resource Include="Image\Pokemons\80.png" />
+    <Resource Include="Image\Pokemons\81.png" />
+    <Resource Include="Image\Pokemons\82.png" />
+    <Resource Include="Image\Pokemons\83.png" />
+    <Resource Include="Image\Pokemons\84.png" />
+    <Resource Include="Image\Pokemons\85.png" />
+    <Resource Include="Image\Pokemons\86.png" />
+    <Resource Include="Image\Pokemons\87.png" />
+    <Resource Include="Image\Pokemons\88.png" />
+    <Resource Include="Image\Pokemons\89.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

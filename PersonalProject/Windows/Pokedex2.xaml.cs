@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PersonalProject.Windows
 {
@@ -27,12 +28,49 @@ namespace PersonalProject.Windows
         {
             pokedex = pokedex1;
             nowSeeing = pokedex.LastAsked;
+
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             this.Left = 0;
             this.Top = 0;
 
+            ShowPoke();
+        }
 
+        public void ShowPoke()
+        {
+            Actual = pokedex.pokemons[nowSeeing];
+            
+            string way = $"/Image/Pokemons/{Actual.Index}.png";
+            imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+            
+            lblCate.Content = "Category : " + Actual.Category;
+            lblEvo.Content = "Evolution : " + Actual.Evolution;
+            lblGene.Content = "Generation : " + Actual.Generation;
+            lblHeight.Content = "Height : " + Actual.Height;
+            lblIndex.Content = "Index : " + Actual.Index;
+            lblTalent.Content = "Talent : " + Actual.Talent;
+            lblType.Content = "Type : " + Actual.Type;
+            lblWeight.Content = "Weight : " + Actual.Weight;
+            lblName.Content = "Name : " + Actual.Name;
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            if(nowSeeing < pokedex.pokemons.Count)
+            {
+                nowSeeing++;
+                ShowPoke();
+            }
+        }
+
+        private void btnPrev_Click(object sender, RoutedEventArgs e)
+        {
+            if (nowSeeing > 0)
+            {
+                nowSeeing--;
+                ShowPoke();
+            }
         }
     }
 }

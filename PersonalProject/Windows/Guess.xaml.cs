@@ -174,6 +174,18 @@ namespace PersonalProject.Windows
             {
                 btnNext.Opacity = 1;
                 txbResult.Text = $"SUCESS";
+
+                if (toGuess.Index < 90)
+                {
+                    string way = $"/Image/Pokemons/{toGuess.Index}.png";
+                    imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                }
+                else
+                {
+                    string way = $"/Image/Pokemons/{toGuess.Index}.png";
+                    imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                }
+
                 opac = false;
                 found = true;
             }
@@ -181,6 +193,17 @@ namespace PersonalProject.Windows
             {
                 if(nbClues == 7)
                 {
+                    if (toGuess.Index < 90)
+                    {
+                        string way = $"/Image/Pokemons/{toGuess.Index}.png";
+                        imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                    }
+                    else
+                    {
+                        string way = $"/Image/Pokemons/{toGuess.Index}.png";
+                        imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                    }
+
                     btnNext.Opacity = 1;
                     txbResult.Text = $"THE POKEMON TO GUESS WAS {toGuess.Name}";
                     opac = false;
