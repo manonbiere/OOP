@@ -79,7 +79,7 @@ namespace PersonalProject.Windows
             }
             poke = pokedex.pokemons[i];
 
-            if (pokedex.pokemons[i].Index < 90)
+            if (pokedex.pokemons[i].Index < 152)
             {
                 string way = $"/Image/Pokemons/{poke.Index}.png";
                 imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
