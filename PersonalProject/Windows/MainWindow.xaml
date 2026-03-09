@@ -20,8 +20,8 @@
         </StackPanel>
 
         <Image Margin="0,10,0,0" Source="/Image/Poke.png" Stretch="Fill" Height="121" VerticalAlignment="Top" HorizontalAlignment="Left" Width="165"/>
-        <Label Content="Quick news" HorizontalAlignment="Left" Height="41" Margin="182,30,0,0" VerticalAlignment="Top" Width="592"/>
-        <Label Content="How to use the app ?" HorizontalAlignment="Left" Height="322" Margin="182,86,0,0" VerticalAlignment="Top" Width="280"/>
-        <Label Content="How to use the guessing game ?" HorizontalAlignment="Left" Height="322" Margin="494,86,0,0" VerticalAlignment="Top" Width="280"/>
+        <TextBlock x:Name="txb_OverallInfo" HorizontalAlignment="Left" Height="340" Margin="182,100,0,0" TextWrapping="Wrap" Text="OverallInfo" VerticalAlignment="Top" Width="279"/>
+        <TextBlock HorizontalAlignment="Left" Height="340" Margin="495,100,0,0" TextWrapping="Wrap" Text="idk" VerticalAlignment="Top" Width="279"/>
+        <TextBlock x:Name="txb_QuickNews" HorizontalAlignment="Left" Height="60" Margin="182,26,0,0" TextWrapping="Wrap" Text="Quick News :" VerticalAlignment="Top" Width="563"/>
     </Grid>
 </Window>

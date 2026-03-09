@@ -15,9 +15,9 @@
 
         <StackPanel HorizontalAlignment="Left" Height="228" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.565,0.351">
             <Button x:Name="btnHome" Content=" " FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Height="144"/>
-            <Button x:Name="btnGuess" Content="GUESS" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
-            <Button x:Name="btnPokedex" Content="POKEDEX" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
-            <Button x:Name="btnHistory" Content="HISTORY" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0"/>
+            <Button x:Name="btnGuess" Content="GUESS" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Click="btnGuess_click"/>
+            <Button x:Name="btnPokedex" Content="POKEDEX" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Click="btnPokedex_Click"/>
+            <Button x:Name="btnHistory" Content="HISTORY" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Click="btnHistory_Click"/>
         </StackPanel>
 
         <Image Margin="0,10,0,0" Source="/Image/Poke.png" Stretch="Fill" Height="121" VerticalAlignment="Top" HorizontalAlignment="Left" Width="165"/>

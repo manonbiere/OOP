@@ -26,6 +26,17 @@ namespace PersonalProject.Windows
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             this.Left = 0;
             this.Top = 0;
+
+            txb_OverallInfo.Text = "Here is the use of this app :\n\n" +
+                "How to use the guessing game ? It is quit easy, you have some clues and " +
+                "you must chose the right pokemon in the combo bar in order to win. Once you have the right pokemon you may try to guess the next one." +
+                "If you don't find the right pokemon it is still okay only your streak will fail. You can also skip for the next pokemon to guess.\n\n" +
+                "Then there is also a pokedex fonction. In the pokedex you may find every pokemons realesed. If you click on a pokemon you may have more information" +
+                "about it. looking a bit the same as the pokedex fonction is the history part. you chose a pokemon in the combo box and a picture of it with it's " +
+                "story will appear.";
+
+            txb_QuickNews.Text = "Quick News of the mounth : As of early March 2026, the Pokémon world is celebrating its 30th anniversary " +
+                "with major announcements, including a new generation of games, a new console release, and several new titles. ";
         }
 
         private void btnGuess_Click(object sender, RoutedEventArgs e)

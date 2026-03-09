@@ -72,5 +72,26 @@ namespace PersonalProject.Windows
                 ShowPoke();
             }
         }
+
+        private void btnGuess_click(object sender, RoutedEventArgs e)
+        {
+            Guess next = new Guess();
+            next.Show();
+            this.Close();
+        }
+
+        private void btnPokedex_Click(object sender, RoutedEventArgs e)
+        {
+            Pokedex1 next = new Pokedex1();
+            next.Show();
+            this.Close();
+        }
+
+        private void btnHistory_Click(object sender, RoutedEventArgs e)
+        {
+            History next = new History();
+            next.Show();
+            this.Close();
+        }
     }
 }
