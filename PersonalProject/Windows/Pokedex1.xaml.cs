@@ -45,7 +45,7 @@ namespace PersonalProject.Windows
                 label.Content = pokedex.pokemons[i].Name;
 
                 System.Windows.Controls.Image image = i == 0 ? imgPoke1 : i == 1 ? imgPoke2 : i == 2 ? imgPoke3 : i == 3 ? imgPoke4 : i == 4 ? imgPoke5 : i == 5 ? imgPoke6 : i == 6 ? imgPoke7 : i == 7 ? imgPoke8 : i == 8 ? imgPoke9 : i == 9 ? imgPoke10 : i == 10 ? imgPoke11 : i == 11 ? imgPoke12 : imgPoke13;
-                string way = $"/Image/Pokemons/{pokedex.pokemons[i].Index}.png";
+                string way = $"/Image/pokemon/pokemon/{pokedex.pokemons[i].Index}.png";
                 image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
             }
         }
@@ -211,16 +211,10 @@ namespace PersonalProject.Windows
                     label.Content = pokedex.pokemons[j].Name;
 
                     System.Windows.Controls.Image image = i == 0 ? imgPoke1 : i == 1 ? imgPoke2 : i == 2 ? imgPoke3 : i == 3 ? imgPoke4 : i == 4 ? imgPoke5 : i == 5 ? imgPoke6 : i == 6 ? imgPoke7 : i == 7 ? imgPoke8 : i == 8 ? imgPoke9 : i == 9 ? imgPoke10 : i == 10 ? imgPoke11 : i == 11 ? imgPoke12 : imgPoke13;
-                    if (pokedex.pokemons[j].Index < 252 ) 
-                    {
-                        string way = $"/Image/Pokemons/{pokedex.pokemons[j].Index}.png";
-                        image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
-                    }
-                    else
-                    {
-                        string way = $"/Image/fond bleue.png";
-                        image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
-                    }
+                    
+                    string way = $"/Image/pokemon/pokemon/{pokedex.pokemons[j].Index}.png";
+                    image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                    
                 }
             }
         }
@@ -242,16 +236,10 @@ namespace PersonalProject.Windows
                     label.Content = pokedex.pokemons[j].Name;
 
                     System.Windows.Controls.Image image = i == 0 ? imgPoke1 : i == 1 ? imgPoke2 : i == 2 ? imgPoke3 : i == 3 ? imgPoke4 : i == 4 ? imgPoke5 : i == 5 ? imgPoke6 : i == 6 ? imgPoke7 : i == 7 ? imgPoke8 : i == 8 ? imgPoke9 : i == 9 ? imgPoke10 : i == 10 ? imgPoke11 : i == 11 ? imgPoke12 : imgPoke13;
-                    if (pokedex.pokemons[j].Index < 262)
-                    {
-                        string way = $"/Image/Pokemons/{pokedex.pokemons[j].Index}.png";
-                        image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
-                    }
-                    else
-                    {
-                        string way = $"/Image/fond bleue.png";
-                        image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
-                    }
+                    
+                    string way = $"/Image/pokemon/pokemon/{pokedex.pokemons[j].Index}.png";
+                    image.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+                    
                 }
             }
             else

@@ -79,16 +79,9 @@ namespace PersonalProject.Windows
             }
             poke = pokedex.pokemons[i];
 
-            if (pokedex.pokemons[i].Index < 152)
-            {
-                string way = $"/Image/Pokemons/{poke.Index}.png";
-                imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
-            }
-            else
-            {
-                string way = $"/Image/Pokemons/{poke.Index}.png";
-                imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
-            }
+            string way = $"/Image/pokemon/pokemon/{poke.Index}.png";
+            imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
+            
             
 
             txbQuickInfo.Text = $"Generic information : {poke.Name} is a {poke.Type} pokemon (index {poke.Index}). It's height is of {poke.Height} cm for {poke.Weight} kg. It's from the {poke.Category} category and {poke.Talent} is it's talent. When it evolves it becomes {poke.Evolution}";

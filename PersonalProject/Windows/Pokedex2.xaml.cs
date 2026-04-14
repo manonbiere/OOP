@@ -41,7 +41,7 @@ namespace PersonalProject.Windows
         {
             Actual = pokedex.pokemons[nowSeeing];
             
-            string way = $"/Image/Pokemons/{Actual.Index}.png";
+            string way = $"/Image/pokemon/pokemon/{Actual.Index}.png";
             imgPoke.Source = new BitmapImage(new Uri(way, UriKind.Relative));
             
             lblCate.Content = "Category : " + Actual.Category;
