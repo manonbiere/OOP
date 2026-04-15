@@ -73,7 +73,14 @@ namespace PersonalProject.Windows
             }
         }
 
-        private void btnGuess_click(object sender, RoutedEventArgs e)
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+            this.Close();
+        }
+
+        private void btnGuess_Click(object sender, RoutedEventArgs e)
         {
             Guess next = new Guess();
             next.Show();

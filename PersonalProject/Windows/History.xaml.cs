@@ -62,7 +62,7 @@ namespace PersonalProject.Windows
             this.Close();
         }
 
-        private void btnHome_Clck(object sender, RoutedEventArgs e)
+        private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             MainWindow window = new MainWindow();
             window.Show();

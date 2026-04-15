@@ -37,6 +37,72 @@
             </Button>
         </StackPanel>
 
+        <Button x:Name="btnPoke1" Content="" Margin="305,4,0,0" Click="btnPoke1_Click" HorizontalAlignment="Left" Width="96" Height="137" VerticalAlignment="Top">
+            <Button.Background>
+                <SolidColorBrush Color="#FFF7F9FA" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke2" Content="" Margin="434,4,0,0" Click="btnPoke2_Click" HorizontalAlignment="Left" Width="96" Height="137" VerticalAlignment="Top">
+            <Button.Background>
+                <SolidColorBrush Color="#FFF7F9FA" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke3" Content="" Margin="561,4,0,0" Click="btnPoke3_Click" HorizontalAlignment="Left" Width="96" Height="137" VerticalAlignment="Top">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke4" Content="" Margin="683,4,0,0" Click="btnPoke4_Click" HorizontalAlignment="Left" Width="96" Height="137" VerticalAlignment="Top">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke6" Content="" HorizontalAlignment="Left" Height="137" Margin="305,155,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke6_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke7" Content="" HorizontalAlignment="Left" Height="137" Margin="434,155,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke7_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke8" Content="" HorizontalAlignment="Left" Height="137" Margin="561,155,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke8_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke9" Content="" HorizontalAlignment="Left" Height="137" Margin="683,155,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke9_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke5" Content="" HorizontalAlignment="Left" Height="137" Margin="178,155,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke5_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke11" Content="" HorizontalAlignment="Left" Height="137" Margin="305,303,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke11_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke12" Content="" HorizontalAlignment="Left" Height="137" Margin="434,303,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke12_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke13" Content="" HorizontalAlignment="Left" Height="137" Margin="561,303,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke13_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FFF7F9FA" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPoke10" Content="" HorizontalAlignment="Left" Height="137" Margin="178,303,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke10_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FFF7F9FA" Opacity="0.75"/>
+            </Button.Background>
+        </Button>
+
         <Image x:Name="imgPOKE" Margin="0,10,0,0" Source="/Image/Poke.png" Stretch="Fill" Height="121" VerticalAlignment="Top" HorizontalAlignment="Left" Width="165"/>
 
         <Image x:Name="imgPoke1" Margin="309,8,0,0" Source="/Image/Pokemons/1.png" Stretch="Fill" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88"/>
@@ -68,25 +134,18 @@
         <Label x:Name="lblpoke12" Content="Label" HorizontalAlignment="Left" Margin="455,414,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblpoke13" Content="Label" HorizontalAlignment="Left" Margin="582,416,0,0" VerticalAlignment="Top"/>
 
-        <Button x:Name="btnPrev" Content="PREV" HorizontalAlignment="Left" Margin="182,8,0,0" VerticalAlignment="Top" Height="105" Width="88" Background="#FF99D9EA" Click="btnPrev_Click"/>
-        <Button x:Name="btnNext" Content="NEXT" HorizontalAlignment="Left" Margin="687,307,0,0" VerticalAlignment="Top" Height="105" Width="88" Background="#FF99D9EA" Click="btnNext_Click"/>
-
-        <Button x:Name="btnPoke1" Content="" HorizontalAlignment="Left" Height="137" Margin="305,4,0,0" VerticalAlignment="Top" Width="96" Click="btnPoke1_Click">
+        <Button x:Name="btnPrev" Content="PREV" HorizontalAlignment="Left" Margin="182,8,0,0" VerticalAlignment="Top" Height="105" Width="88" Click="btnPrev_Click">
             <Button.Background>
-                <ImageBrush/>
+                <SolidColorBrush Color="#FFF7F9FA" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnPoke2" Content="" HorizontalAlignment="Left" Height="137" Margin="434,4,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke2_Click"/>
-        <Button x:Name="btnPoke3" Content="" HorizontalAlignment="Left" Height="137" Margin="561,4,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke3_Click"/>
-        <Button x:Name="btnPoke4" Content="" HorizontalAlignment="Left" Height="137" Margin="683,4,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke4_Click"/>
-        <Button x:Name="btnPoke6" Content="" HorizontalAlignment="Left" Height="137" Margin="305,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke6_Click"/>
-        <Button x:Name="btnPoke7" Content="" HorizontalAlignment="Left" Height="137" Margin="434,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke7_Click"/>
-        <Button x:Name="btnPoke8" Content="" HorizontalAlignment="Left" Height="137" Margin="561,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke8_Click"/>
-        <Button x:Name="btnPoke9" Content="" HorizontalAlignment="Left" Height="137" Margin="683,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke9_Click"/>
-        <Button x:Name="btnPoke5" Content="" HorizontalAlignment="Left" Height="137" Margin="178,155,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke5_Click"/>
-        <Button x:Name="btnPoke11" Content="" HorizontalAlignment="Left" Height="137" Margin="305,303,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke11_Click"/>
-        <Button x:Name="btnPoke12" Content="" HorizontalAlignment="Left" Height="137" Margin="434,303,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke12_Click"/>
-        <Button x:Name="btnPoke13" Content="" HorizontalAlignment="Left" Height="137" Margin="561,303,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke13_Click"/>
-        <Button x:Name="btnPoke10" Content="" HorizontalAlignment="Left" Height="137" Margin="178,303,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" Click="btnPoke10_Click"/>
+        <Button x:Name="btnNext" Content="NEXT" HorizontalAlignment="Left" Margin="687,307,0,0" VerticalAlignment="Top" Height="105" Width="88" Click="btnNext_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FFF7F9FA" Opacity="0.9"/>
+            </Button.Background>
+        </Button>
+
+
+
     </Grid>
 </Window>
