@@ -30,13 +30,16 @@
 
         <Image x:Name="imgPoke" Margin="181,89,0,0" Source="/Image/fond bleue.png" Stretch="Fill" HorizontalAlignment="Left" Width="219" Height="228" VerticalAlignment="Top"/>
         <Button x:Name="btnSkip" Content="   SKIP   " HorizontalAlignment="Left" Margin="672,334,0,0" VerticalAlignment="Top" Width="88" Background="#FF99D9EA" Click="btnSkip_Click"/>
-        <ComboBox x:Name="lbxPokemon" HorizontalAlignment="Left" Margin="344,336,0,0" VerticalAlignment="Top" Width="187" SelectionChanged="lbxPokemon_SelectionChange"/>
-        <Label Content="Your Guess :" HorizontalAlignment="Left" Margin="253,334,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="lbxPokemon" HorizontalAlignment="Left" Margin="347,378,0,0" VerticalAlignment="Top" Width="187" SelectionChanged="lbxPokemon_SelectionChange"/>
+        <Label Content="Your Guess :" HorizontalAlignment="Left" Margin="253,376,0,0" VerticalAlignment="Top"/>
 
         <Label x:Name="lblStrike" Content="Streak = 0" HorizontalAlignment="Left" Margin="253,28,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTotalWin" Content="Total Win = 0" HorizontalAlignment="Left" Margin="418,28,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblHighestStrike" Content="Highest Streak = 0" HorizontalAlignment="Left" Margin="598,28,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnNext" Content="   NEXT   " HorizontalAlignment="Left" Margin="672,374,0,0" VerticalAlignment="Top" Width="88" Background="#FF99D9EA" Click="btnNext_Click"/>
-        <TextBlock x:Name="txbResult" HorizontalAlignment="Left" Margin="329,384,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Height="75" Width="278" FontSize="18"/>
+        <TextBlock x:Name="txbResult" HorizontalAlignment="Left" Margin="329,405,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Height="54" Width="278" FontSize="18"/>
+        <Label Content="Filtre" HorizontalAlignment="Left" Margin="266,336,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txb_Filtre" HorizontalAlignment="Left" Margin="347,341,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="165" SelectionChanged="SelectionChanged_tbxFiltre"/>
+        <Button x:Name="btnok" Content="ok" HorizontalAlignment="Left" Margin="517,339,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.995,0.025" Click="Click_btnok"/>
     </Grid>
 </Window>

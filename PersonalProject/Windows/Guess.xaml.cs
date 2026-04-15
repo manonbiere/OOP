@@ -34,12 +34,16 @@ namespace PersonalProject.Windows
         public string guessed;
         public bool found;
         public bool opac = true;
+        public string txbFiltre;
+
         public Guess()
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             this.Left = 0;
             this.Top = 0;
+
+            txbFiltre = null;
 
             List<Pokemon> poke = pokedex.pokemons;
             for (int i = 0; i < poke.Count; i++)
@@ -51,6 +55,18 @@ namespace PersonalProject.Windows
             streak = 0;
             totalWin = 0;
             higheststreak = 0;
+        }
+
+        public void UpdateLbx()
+        {
+            lbxPokemon.Items.Clear();
+
+            List<Pokemon> poke = pokedex.pokemons;
+            for (int i = 0; i < poke.Count; i++)
+            {
+                if (poke[i].Name.Contains(txbFiltre))
+                    lbxPokemon.Items.Add(poke[i].Name);
+            }
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
@@ -251,6 +267,33 @@ namespace PersonalProject.Windows
                     lblStrike.Content = $"Streak = {streak}";
                     Start();
                 }
+            }
+        }
+
+        private void SelectionChanged_tbxFiltre(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Click_btnok(object sender, RoutedEventArgs e)
+        {
+            string contenu = txb_Filtre.Text;
+            if(contenu.Length == 0 || contenu == " ")
+            {
+                txbFiltre = null;
+                
+                lbxPokemon.Items.Clear();
+
+                List<Pokemon> poke = pokedex.pokemons;
+                for (int i = 0; i < poke.Count; i++)
+                {
+                    lbxPokemon.Items.Add(poke[i].Name);
+                }
+            }
+            else
+            {
+                txbFiltre = contenu;
+                UpdateLbx();
             }
         }
     }

@@ -24,12 +24,15 @@ namespace PersonalProject.Windows
     public partial class History : Window
     {
         public Pokedex pokedex = new Pokedex();
+        public string txbFiltre;
         public History()
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             this.Left = 0;
             this.Top = 0;
+
+            txbFiltre = null;
 
             List<Pokemon> poke = pokedex.pokemons;
             for (int i = 0; i < poke.Count; i++)
@@ -86,6 +89,40 @@ namespace PersonalProject.Windows
 
             txbQuickInfo.Text = $"Generic information : {poke.Name} is a {poke.Type} pokemon (index {poke.Index}). It's height is of {poke.Height} cm for {poke.Weight} kg. It's from the {poke.Category} category and {poke.Talent} is it's talent. When it evolves it becomes {poke.Evolution}";
             txbHistory.Text = $"Behaviour : {poke.History}";
+        }
+
+        public void UpdateLbx()
+        {
+            lbxPoke.Items.Clear();
+
+            List<Pokemon> poke = pokedex.pokemons;
+            for (int i = 0; i < poke.Count; i++)
+            {
+                if (poke[i].Name.Contains(txbFiltre))
+                    lbxPoke.Items.Add(poke[i].Name);
+            }
+        }
+
+        private void Click_btnok(object sender, RoutedEventArgs e)
+        {
+            string contenu = txb_Filtre.Text;
+            if (contenu.Length == 0 || contenu == " ")
+            {
+                txbFiltre = null;
+
+                lbxPoke.Items.Clear();
+
+                List<Pokemon> poke = pokedex.pokemons;
+                for (int i = 0; i < poke.Count; i++)
+                {
+                    lbxPoke.Items.Add(poke[i].Name);
+                }
+            }
+            else
+            {
+                txbFiltre = contenu;
+                UpdateLbx();
+            }
         }
     }
 }

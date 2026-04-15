@@ -23,8 +23,12 @@
         <Image Margin="0,10,0,0" Source="/Image/Poke.png" Stretch="Fill" Height="121" VerticalAlignment="Top" HorizontalAlignment="Left" Width="165"/>
         <Image x:Name="imgPoke" Margin="175,45,0,0" Source="/Image/fond bleue.png" Stretch="Fill" Height="245" VerticalAlignment="Top" HorizontalAlignment="Left" Width="189"/>
 
-        <ComboBox x:Name="lbxPoke" HorizontalAlignment="Left" Margin="175,366,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="lbxPoke_SlectionChanged"/>
+        <ComboBox x:Name="lbxPoke" HorizontalAlignment="Left" Margin="244,368,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="lbxPoke_SlectionChanged"/>
         <TextBlock x:Name="txbQuickInfo" HorizontalAlignment="Left" Margin="378,45,0,0" TextWrapping="Wrap" Text="Generic information :" VerticalAlignment="Top" Height="63" Width="390"/>
         <TextBlock x:Name="txbHistory" HorizontalAlignment="Left" Margin="378,113,0,0" TextWrapping="Wrap" Text="Behaviour :" VerticalAlignment="Top" Height="320" Width="390"/>
+        
+        <Label Content="Filtre" HorizontalAlignment="Left" Margin="176,335,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txb_Filtre" HorizontalAlignment="Left" Margin="222,339,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnok" Content="ok" HorizontalAlignment="Left" Margin="347,339,0,0" VerticalAlignment="Top" Click="Click_btnok"/>
     </Grid>
 </Window>
