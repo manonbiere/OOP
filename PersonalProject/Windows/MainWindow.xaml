@@ -9,19 +9,42 @@
         ResizeMode="CanResize"
         WindowStyle="ToolWindow">
     <Grid>
+        <Image Source="/Image/Background/Background1.jpg" Stretch="Fill"/>
+        <Image Margin="182,100,339,44" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Opacity="0.75"/>
+        <Image Margin="495,100,26,44" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Opacity="0.75"/>
+        <Image Margin="182,26,26,398" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Opacity="0.75"/>
+
         <StackPanel HorizontalAlignment="Left" Height="500" VerticalAlignment="Center" Width="155">
-            <Image Height="648" Source="/Image/fond bleue.png" Stretch="Fill" Width="1152"/>
+            <Image Height="648" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Width="1152" Opacity="0.75"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="228" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.565,0.351">
-            <Button x:Name="btnHome" Content=" " FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Height="144"/>
-            <Button x:Name="btnGuess" Content="GUESS" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Click="btnGuess_Click"/>
-            <Button x:Name="btnPokedex" Content="POKEDEX" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Click="btnPokedex_Click"/>
-            <Button x:Name="btnHistory" Content="HISTORY" FontSize="18" Background="#FF99D9EA" BorderThickness="0,0,0,0" Click="btnHistory_CLick"/>
+            <Button x:Name="btnHome" Content=" " FontSize="18" BorderThickness="0,0,0,0" Height="144" Opacity="0.97">
+                <Button.Background>
+                    <SolidColorBrush Color="White" Opacity="0.15"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnGuess" Content="GUESS" FontSize="18" BorderThickness="0,0,0,0" Click="btnGuess_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="White" Opacity="0.75"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnPokedex" Content="POKEDEX" FontSize="18" BorderThickness="0,0,0,0" Click="btnPokedex_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="White" Opacity="0.75"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnHistory" Content="HISTORY" FontSize="18" BorderThickness="0,0,0,0" Click="btnHistory_CLick">
+                <Button.Background>
+                    <SolidColorBrush Color="White" Opacity="0.75"/>
+                </Button.Background>
+            </Button>
         </StackPanel>
 
+
         <Image Margin="0,10,0,0" Source="/Image/Poke.png" Stretch="Fill" Height="121" VerticalAlignment="Top" HorizontalAlignment="Left" Width="165"/>
-        <TextBlock x:Name="txb_OverallInfo" HorizontalAlignment="Left" Height="340" Margin="182,100,0,0" TextWrapping="Wrap" Text="OverallInfo" VerticalAlignment="Top" Width="279"/>
+        <TextBlock x:Name="txb_OverallInfo" HorizontalAlignment="Left" Height="340" Margin="183,100,0,0" TextWrapping="Wrap" Text="OverallInfo" VerticalAlignment="Top" Width="279"/>
         <TextBlock HorizontalAlignment="Left" Height="340" Margin="495,100,0,0" TextWrapping="Wrap" Text="idk" VerticalAlignment="Top" Width="279"/>
         <TextBlock x:Name="txb_QuickNews" HorizontalAlignment="Left" Height="60" Margin="182,26,0,0" TextWrapping="Wrap" Text="Quick News :" VerticalAlignment="Top" Width="563"/>
+
     </Grid>
 </Window>
