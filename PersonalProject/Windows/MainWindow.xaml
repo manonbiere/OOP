@@ -10,9 +10,9 @@
         WindowStyle="ToolWindow">
     <Grid>
         <Image Source="/Image/Background/Background1.jpg" Stretch="Fill"/>
-        <Image Margin="182,100,339,44" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Opacity="0.75"/>
-        <Image Margin="495,100,26,44" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Opacity="0.75"/>
-        <Image Margin="182,26,26,398" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Opacity="0.75"/>
+        <Image Margin="182,100,0,0" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Opacity="0.75" Height="340" VerticalAlignment="Top" HorizontalAlignment="Left" Width="279"/>
+        <Image Margin="495,100,0,0" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Opacity="0.75" Height="340" VerticalAlignment="Top" HorizontalAlignment="Left" Width="279"/>
+        <Image Margin="182,26,0,0" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Opacity="0.75" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="592"/>
 
         <StackPanel HorizontalAlignment="Left" Height="500" VerticalAlignment="Center" Width="155">
             <Image Height="648" Source="/Image/carre blanc 100x100.png" Stretch="Fill" Width="1152" Opacity="0.75"/>
