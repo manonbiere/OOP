@@ -43,7 +43,7 @@
 
         <Image Margin="0,10,0,0" Source="/Image/Poke.png" Stretch="Fill" Height="121" VerticalAlignment="Top" HorizontalAlignment="Left" Width="165"/>
         <TextBlock x:Name="txb_OverallInfo" HorizontalAlignment="Left" Height="340" Margin="183,100,0,0" TextWrapping="Wrap" Text="OverallInfo" VerticalAlignment="Top" Width="279"/>
-        <TextBlock HorizontalAlignment="Left" Height="340" Margin="495,100,0,0" TextWrapping="Wrap" Text="idk" VerticalAlignment="Top" Width="279"/>
+        <TextBlock x:Name="txb_PokemonInfo" HorizontalAlignment="Left" Height="340" Margin="495,100,0,0" TextWrapping="Wrap" Text="idk" VerticalAlignment="Top" Width="279"/>
         <TextBlock x:Name="txb_QuickNews" HorizontalAlignment="Left" Height="60" Margin="182,26,0,0" TextWrapping="Wrap" Text="Quick News :" VerticalAlignment="Top" Width="563"/>
 
     </Grid>

@@ -76,7 +76,7 @@ namespace PersonalProject.Windows
             Pokemon poke = new Pokemon();
 
             int i = 0;
-            while (pokemon != pokedex.pokemons[i].Name)
+            while (i < pokedex.pokemons.Count && pokemon != pokedex.pokemons[i].Name)
             {
                 i++;
             }

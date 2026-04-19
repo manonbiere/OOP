@@ -37,6 +37,13 @@ namespace PersonalProject.Windows
 
             txb_QuickNews.Text = "Quick News of the mounth : As of early March 2026, the Pokémon world is celebrating its 30th anniversary " +
                 "with major announcements, including a new generation of games, a new console release, and several new titles. ";
+
+            txb_PokemonInfo.Text = "Here is some general information on Pokemon :\n\n" +
+                "Pokémon is a globally beloved franchise that began in the 1990s and has since become a cultural phenomenon." +
+                " It takes place in a world where humans coexist with" +
+                " mysterious creatures called Pokémon, each possessing unique abilities and characteristics. Trainers travel across various " +
+                "regions, capturing and training Pokémon to battle, grow stronger, and form deep bonds with them. Beyond just competition, " +
+                "Pokémon emphasizes friendship, exploration, and adventure, making it a timeless experience enjoyed by people of all ages.";
         }
 
         private void btnGuess_Click(object sender, RoutedEventArgs e)
