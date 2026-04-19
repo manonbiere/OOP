@@ -158,6 +158,7 @@ namespace PersonalProject.Windows
                     break;
             }
         }
+
         public void Start()
         {
             btnNext.Opacity = 0;
